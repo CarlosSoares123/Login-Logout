@@ -1,5 +1,5 @@
 # Aplicação Frontend em React.js
-Este é o código-fonte de uma aplicação frontend desenvolvida em React.js que se integra com um servidor de autenticação Express.js. A aplicação permite que os usuários façam login, verifiquem seu status de autenticação e façam logout. Ela usa a biblioteca Axios para realizar chamadas à API do servidor de autenticação e o React Router Dom para gerenciar as rotas da aplicação.
+Este é o código-fonte de uma aplicação frontend desenvolvida em React.js que se integra com um servidor de autenticação Express.js. A aplicação permite que os usuários façam login, verifiquem seu status de autenticação, façam logout e fazer o cadastro. Ela usa a biblioteca Axios para realizar chamadas à API do servidor de autenticação e o React Router Dom para gerenciar as rotas da aplicação.
 
 ## Pré-requisitos
 Antes de executar a aplicação, certifique-se de ter os seguintes pré-requisitos instalados:

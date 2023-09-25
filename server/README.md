@@ -2,7 +2,7 @@
 
 ## Servidor de Autenticação Express.js
 
-Este é um servidor de autenticação Express.js simples que fornece funcionalidades de login e logout. Ele utiliza o MySQL como banco de dados para autenticação de usuários e JWT (Tokens JSON Web) para gerenciamento de sessões de usuário. O servidor também inclui uma configuração de CORS (Compartilhamento de Recursos de Origem Cruzada) para permitir solicitações de uma origem específica.
+Este é um servidor de autenticação Express.js simples que fornece funcionalidades de login e logout. Ele utiliza o MySQL como banco de dados para autenticação de usuários, JWT (Tokens JSON Web) para gerenciamento de sessões de usuário e Bcrypt para fazer hash de senhas. O servidor também inclui uma configuração de CORS (Compartilhamento de Recursos de Origem Cruzada) para permitir solicitações de uma origem específica.
 
 ### Pré-requisitos
 
@@ -25,10 +25,10 @@ index.js:
 
 
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'WILIETE123',
-  database: 'signup'
+  host: '',
+  user: '',
+  password: '',
+  database: ''
 });
 ## Para iniciar o servidor, execute o seguinte comando:
 
@@ -67,10 +67,7 @@ O servidor aceita tanto os métodos POST quanto GET e suporta credenciais (cooki
 ## Package.json
 O arquivo package.json lista as dependências do projeto, incluindo Express.js, MySQL, JWT e outros pacotes necessários. Você pode instalar essas dependências usando npm install.
 
-## Licença
-Este projeto está licenciado sob a Licença ISC.
-
-Autor
-[Carlos Soares]
+## Autor
+Carlos Soares
 
 Sinta-se à vontade para modificar e expandir este servidor de autenticação de acordo com os requisitos do seu projeto.
