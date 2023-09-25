@@ -1,10 +1,10 @@
 import axios from 'axios'
 import { useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
-export default function Login(){
+export default function Register(){
 
-  const [values, setValues] = useState({email:'', password: ''})
+  const [values, setValues] = useState({name: '', email: '', password: ''})
     
   const navigate = useNavigate()
 
@@ -12,12 +12,12 @@ export default function Login(){
   const handleSubmit= (e) => {
     e.preventDefault()
 
-    axios.post('http://localhost:8001/login', values) 
+    axios.post('http://localhost:8001/register', values) 
     .then(res => {
       if(res.data.Status === "Success") {
-        navigate('/')
+        navigate('/login')
       } else {
-        alert(res.data.Message)
+        alert(Error)
       }
     })
     .catch(err => console.log(err))
@@ -26,9 +26,18 @@ export default function Login(){
 
   return(
     <div className="d-flex justify-content-center align-items-center bg-primary vh-100">
-      <div className="bg-white p-3 rounded w-50">
-        <h2>Sign-In</h2>
+      <div className="bg-white p-3 rounded w-25">
+        <h2>Sign-Up</h2>
         <form onSubmit={handleSubmit}>
+
+          <div className="mb-3">
+            <label htmlFor="name"><strong>Name</strong></label>
+            <input type="text" placeholder="Enter name" name="name" 
+            className="form-control rounded-0"
+            onChange={e => setValues({...values, name: e.target.value})}
+            />
+          </div>
+
           <div className="mb-3">
             <label htmlFor="email"><strong>Email</strong></label>
             <input type="email" placeholder="Enter Email" name="email" autoComplete="off"
@@ -45,9 +54,9 @@ export default function Login(){
             />
           </div>
 
-          <button className="btn btn-success w-100 rounded-0">Log in</button>
+          <button className="btn btn-success w-100 rounded-0">Sign up</button>
           <p>You are agree to aour terms and policies</p>
-          <Link to='/register' className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">Create Account</Link>
+          <Link to='/login' className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">Create Account</Link>
         </form>
       </div>
     </div>
