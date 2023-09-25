@@ -40,6 +40,6 @@ O arquivo package.json lista as dependências do projeto, incluindo React.js, Ax
 Este projeto está licenciado sob a Licença MIT.
 
 ## Autor
-[Seu Nome]
+Carlos Soares
 
 Sinta-se à vontade para modificar e expandir esta aplicação frontend de acordo com os requisitos do seu projeto.
